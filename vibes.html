@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="assets/blackhue-favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Vibes — Black Hue</title>
+  <style>
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Header ───────────────────────────────────────────── -->
+  <header class="site-header">
+    <a class="logo-slot" href="index.html" aria-label="Black Hue home">
+      <img src="assets/black-hue-logo.png" alt="Black Hue logo">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="sr-only">Open menu</span>
+      <img src="assets/LUMEN-MENU.svg" alt="" aria-hidden="true">
+    </button>
+    <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="start-guide.html">Setup Guide</a>
+      <a href="vibes.html" aria-current="page">Vibes</a>
+      <a data-order-trigger="Black Hue Floor Lamp">Order</a>
+    </nav>
+  </header>
+
+  <!-- ── Page hero ────────────────────────────────────────── -->
+  <div class="moods-hero reveal-on-scroll">
+    <p class="eyebrow">Curated moods</p>
+    <h1>Set the scene.</h1>
+    <p>Four moods, each with step-by-step settings. Follow them exactly or use them as a starting point.</p>
+  </div>
+
+  <!-- ── Mood grid ────────────────────────────────────────── -->
+  <section class="moods-section">
+    <div class="moods-grid">
+
+      <!-- Movie Night -->
+      <article
+        class="mood-card reveal-on-scroll"
+        role="button"
+        tabindex="0"
+        aria-haspopup="dialog"
+        data-mood="movie-night"
+      >
+        <div class="mood-photo">
+          <!-- swap for: <img src="assets/mood-movie-night.jpg" alt="Movie Night mood lit room"> -->
+          <div class="mood-photo-placeholder">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/></svg>
+            Photo coming soon
+          </div>
+          <div class="mood-swatch" style="background: linear-gradient(135deg,#0b1026,#1e3a8a,#4338ca)"></div>
+        </div>
+        <div class="mood-card-body">
+          <p class="mood-name">Movie Night</p>
+          <p class="mood-vibe">Deep blues and cool tones. The room disappears into the screen.</p>
+          <span class="mood-cta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            How to set this up
+          </span>
+        </div>
+      </article>
+
+      <!-- Fireplace -->
+      <article
+        class="mood-card reveal-on-scroll"
+        role="button"
+        tabindex="0"
+        aria-haspopup="dialog"
+        data-mood="fireplace"
+      >
+        <div class="mood-photo">
+          <div class="mood-photo-placeholder">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/></svg>
+            Photo coming soon
+          </div>
+          <div class="mood-swatch" style="background: linear-gradient(135deg,#7a2f00,#d97706,#fbbf24)"></div>
+        </div>
+        <div class="mood-card-body">
+          <p class="mood-name">Fireplace</p>
+          <p class="mood-vibe">Warm amber and burnt orange. A room that feels like it glows from within.</p>
+          <span class="mood-cta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            How to set this up
+          </span>
+        </div>
+      </article>
+
+      <!-- Chillout -->
+      <article
+        class="mood-card reveal-on-scroll"
+        role="button"
+        tabindex="0"
+        aria-haspopup="dialog"
+        data-mood="chillout"
+      >
+        <div class="mood-photo">
+          <div class="mood-photo-placeholder">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/></svg>
+            Photo coming soon
+          </div>
+          <div class="mood-swatch" style="background: linear-gradient(135deg,#1a3d2b,#2d6a4f,#52b788)"></div>
+        </div>
+        <div class="mood-card-body">
+          <p class="mood-name">Chillout</p>
+          <p class="mood-vibe">Soft greens and muted tones. Calm without being cold.</p>
+          <span class="mood-cta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            How to set this up
+          </span>
+        </div>
+      </article>
+
+      <!-- Aurora -->
+      <article
+        class="mood-card reveal-on-scroll"
+        role="button"
+        tabindex="0"
+        aria-haspopup="dialog"
+        data-mood="aurora"
+      >
+        <div class="mood-photo">
+          <div class="mood-photo-placeholder">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/></svg>
+            Photo coming soon
+          </div>
+          <div class="mood-swatch" style="background: linear-gradient(135deg,#7c3aed,#00c2ff,#00e5a8)"></div>
+        </div>
+        <div class="mood-card-body">
+          <p class="mood-name">Aurora</p>
+          <p class="mood-vibe">Sweeping teals and violets. The northern lights, in your living room.</p>
+          <span class="mood-cta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            How to set this up
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── Modal ────────────────────────────────────────────── -->
+  <div
+    class="modal-overlay"
+    id="mood-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-name"
+    hidden
+  >
+    <div class="modal-panel" id="modal-panel">
+      <div class="modal-handle" aria-hidden="true"></div>
+
+      <div class="modal-header" id="modal-header">
+        <button class="modal-close" id="modal-close" aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <p class="modal-mood-label">Black Hue mood</p>
+        <h2 class="modal-mood-name" id="modal-name"></h2>
+        <p class="modal-mood-vibe" id="modal-vibe"></p>
+      </div>
+
+      <div class="modal-body" id="modal-body">
+        <!-- injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Footer ───────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <h2>Black Hue</h2>
+      <p>Lighting designed around atmosphere.</p>
+      <p>Designed in Kenya.</p>
+    </div>
+    <div class="footer-links" aria-label="Footer links">
+      <div>
+        <h3>Connect</h3>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <a href="start-guide.html">Setup Guide</a>
+        <a href="mailto:hello@blackhue.co.ke">Contact Us</a>
+      </div>
+    </div>
+    <p class="footer-credit">&copy; 2026 Black Hue</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    /* ── Mood data ────────────────────────────────────────── */
+    const moods = {
+      'movie-night': {
+        name: 'Movie Night',
+        vibe: 'Deep blues and cool tones. The room disappears into the screen.',
+        bgClass: 'modal-bg-movie-night',
+        steps: [
+          {
+            action: 'Open the app and tap your Black Hue device.',
+            note: 'Make sure your lamp is powered on and connected.'
+          },
+          {
+            action: 'Tap <strong>Customize</strong> from the bottom menu.',
+            note: null
+          },
+          {
+            action: 'Tap <strong>+</strong> to create a new effect.',
+            note: null
+          },
+          {
+            action: 'Set your colours.',
+            note: 'Use these RGB values:',
+            chips: [
+              { label: 'Midnight blue', rgb: '15, 23, 42', hex: '#0f172a' },
+              { label: 'Ocean', rgb: '30, 58, 138', hex: '#1e3a8a' },
+              { label: 'Dusk', rgb: '67, 56, 202', hex: '#4338ca' },
+            ]
+          },
+          {
+            action: 'Set animation to <strong>Static</strong>.',
+            note: 'This keeps the colour still and lets the room feel cinematic rather than distracting.'
+          },
+          {
+            action: 'Tap <strong>Save</strong> and name it <strong>Movie Night</strong>.',
+            note: 'It will now appear in your saved effects every time.'
+          }
+        ],
+        footnote: 'For a richer colour blend, you can also recreate this under <strong>Multicolor</strong>. You won\'t be able to name it there, but the gradient will be more vibrant.'
+      },
+      'fireplace': {
+        name: 'Fireplace',
+        vibe: 'Warm amber and burnt orange. A room that glows from within.',
+        bgClass: 'modal-bg-fireplace',
+        steps: [
+          {
+            action: 'Open the app and tap your Black Hue device.',
+            note: 'Make sure your lamp is powered on and connected.'
+          },
+          {
+            action: 'Tap <strong>Customize</strong> from the bottom menu.',
+            note: null
+          },
+          {
+            action: 'Tap <strong>+</strong> to create a new effect.',
+            note: null
+          },
+          {
+            action: 'Set your colours.',
+            note: 'Use these RGB values:',
+            chips: [
+              { label: 'Ember', rgb: '122, 47, 0', hex: '#7a2f00' },
+              { label: 'Amber', rgb: '217, 119, 6', hex: '#d97706' },
+              { label: 'Glow', rgb: '251, 191, 36', hex: '#fbbf24' },
+            ]
+          },
+          {
+            action: 'Set animation to <strong>Breathing</strong>.',
+            note: 'The gentle pulse mimics the natural flicker of a real fire.'
+          },
+          {
+            action: 'Tap <strong>Save</strong> and name it <strong>Fireplace</strong>.',
+            note: 'It will now appear in your saved effects every time.'
+          }
+        ],
+        footnote: 'For a richer colour blend, you can also recreate this under <strong>Multicolor</strong>. You won\'t be able to name it there, but the gradient will be more vibrant.'
+      },
+      'chillout': {
+        name: 'Chillout',
+        vibe: 'Soft greens and muted tones. Calm without being cold.',
+        bgClass: 'modal-bg-chillout',
+        steps: [
+          {
+            action: 'Open the app and tap your Black Hue device.',
+            note: 'Make sure your lamp is powered on and connected.'
+          },
+          {
+            action: 'Tap <strong>Customize</strong> from the bottom menu.',
+            note: null
+          },
+          {
+            action: 'Tap <strong>+</strong> to create a new effect.',
+            note: null
+          },
+          {
+            action: 'Set your colours.',
+            note: 'Use these RGB values:',
+            chips: [
+              { label: 'Forest', rgb: '26, 61, 43', hex: '#1a3d2b' },
+              { label: 'Sage', rgb: '45, 106, 79', hex: '#2d6a4f' },
+              { label: 'Mint', rgb: '82, 183, 136', hex: '#52b788' },
+            ]
+          },
+          {
+            action: 'Set animation to <strong>Static</strong>.',
+            note: 'Stillness is the whole point. Let the colour do the work.'
+          },
+          {
+            action: 'Tap <strong>Save</strong> and name it <strong>Chillout</strong>.',
+            note: 'It will now appear in your saved effects every time.'
+          }
+        ],
+        footnote: 'For a richer colour blend, you can also recreate this under <strong>Multicolor</strong>. You won\'t be able to name it there, but the gradient will be more vibrant.'
+      },
+      'aurora': {
+        name: 'Aurora',
+        vibe: 'Sweeping teals and violets. The northern lights, in your living room.',
+        bgClass: 'modal-bg-aurora',
+        steps: [
+          {
+            action: 'Open the app and tap your Black Hue device.',
+            note: 'Make sure your lamp is powered on and connected.'
+          },
+          {
+            action: 'Tap <strong>Customize</strong> from the bottom menu.',
+            note: null
+          },
+          {
+            action: 'Tap <strong>+</strong> to create a new effect.',
+            note: null
+          },
+          {
+            action: 'Set your colours.',
+            note: 'Use these RGB values:',
+            chips: [
+              { label: 'Deep violet', rgb: '124, 58, 237', hex: '#7c3aed' },
+              { label: 'Cyan', rgb: '0, 194, 255', hex: '#00c2ff' },
+              { label: 'Aurora green', rgb: '0, 229, 168', hex: '#00e5a8' },
+            ]
+          },
+          {
+            action: 'Set animation to <strong>Running Water</strong>.',
+            note: 'The slow, sweeping movement mimics the drift of the real aurora borealis.'
+          },
+          {
+            action: 'Tap <strong>Save</strong> and name it <strong>Aurora</strong>.',
+            note: 'It will now appear in your saved effects every time.'
+          }
+        ],
+        footnote: 'For a richer colour blend, you can also recreate this under <strong>Multicolor</strong>. You won\'t be able to name it there, but the gradient will be more vibrant.'
+      }
+    };
+
+    /* ── Modal logic ──────────────────────────────────────── */
+    const overlay   = document.getElementById('mood-modal');
+    const panel     = document.getElementById('modal-panel');
+    const header    = document.getElementById('modal-header');
+    const nameEl    = document.getElementById('modal-name');
+    const vibeEl    = document.getElementById('modal-vibe');
+    const bodyEl    = document.getElementById('modal-body');
+    const closeBtn  = document.getElementById('modal-close');
+
+    let previouslyFocused = null;
+
+    function buildSteps(steps) {
+      return steps.map((s, i) => `
+        <li class="step-row">
+          <span class="step-num" aria-hidden="true">${i + 1}</span>
+          <div class="step-content">
+            <p class="step-action">${s.action}</p>
+            ${s.note ? `<p class="step-note">${s.note}</p>` : ''}
+            ${s.chips ? `<div class="rgb-chips">${s.chips.map(c => `
+              <button
+                class="rgb-chip"
+                data-value="${c.rgb}"
+                aria-label="Copy ${c.label} RGB value ${c.rgb}"
+                title="Click to copy"
+              >
+                <span class="rgb-swatch" style="background:${c.hex}" aria-hidden="true"></span>
+                ${c.rgb}
+              </button>`).join('')}</div>` : ''}
+          </div>
+        </li>
+      `).join('');
+    }
+
+    function openModal(moodKey) {
+      const mood = moods[moodKey];
+      if (!mood) return;
+
+      previouslyFocused = document.activeElement;
+
+      // set content
+      nameEl.textContent = mood.name;
+      vibeEl.textContent = mood.vibe;
+
+      // set gradient
+      panel.className = `modal-panel ${mood.bgClass}`;
+
+      // build body
+      bodyEl.innerHTML = `
+        <p class="modal-section-label">How to set this up</p>
+        <ol class="steps-list">${buildSteps(mood.steps)}</ol>
+        <div class="modal-footnote">
+          <p>${mood.footnote}</p>
+        </div>
+      `;
+
+      // show
+      overlay.hidden = false;
+      overlay.removeAttribute('hidden');
+      requestAnimationFrame(() => {
+        overlay.classList.add('is-open');
+      });
+
+      // trap focus
+      closeBtn.focus();
+
+      // chip copy
+      bodyEl.querySelectorAll('.rgb-chip').forEach(chip => {
+        chip.addEventListener('click', () => copyChip(chip));
+      });
+    }
+
+    function closeModal() {
+      overlay.classList.remove('is-open');
+      setTimeout(() => {
+        overlay.hidden = true;
+        if (previouslyFocused) previouslyFocused.focus();
+      }, 380);
+    }
+
+    function copyChip(chip) {
+      const val = chip.dataset.value;
+      navigator.clipboard.writeText(val).then(() => {
+        chip.classList.add('copied');
+        const orig = chip.innerHTML;
+        chip.innerHTML = chip.innerHTML.replace(val, 'Copied!');
+        setTimeout(() => {
+          chip.classList.remove('copied');
+          chip.innerHTML = orig;
+        }, 1600);
+      }).catch(() => {});
+    }
+
+    // open via card click / keyboard
+    document.querySelectorAll('.mood-card').forEach(card => {
+      const open = () => openModal(card.dataset.mood);
+      card.addEventListener('click', open);
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeModal();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeModal();
+    });
+  </script>
+  <script src="order-modal.js"></script>
+</body>
+</html>

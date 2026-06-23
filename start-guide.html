@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="assets/blackhue-favicon.png">
+  <link rel="apple-touch-icon" href="assets/blackhue-favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Setup Guide — Black Hue</title>
+  <style>
+    
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Header (matches index.html exactly) ──────────────── -->
+  <header class="site-header">
+    <a class="logo-slot" href="index.html" aria-label="Black Hue home">
+      <img src="assets/black-hue-logo.png" alt="Black Hue logo">
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="sr-only">Open menu</span>
+      <img src="assets/LUMEN-MENU.svg" alt="" aria-hidden="true">
+    </button>
+
+    <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="start-guide.html" aria-current="page">Start Guide</a>
+      <a href="vibes.html">Vibes</a>
+      <a data-order-trigger="Black Hue Floor Lamp">Order</a>
+    </nav>
+  </header>
+
+  <!-- ── Welcome hero ─────────────────────────────────────── -->
+  <section class="welcome-hero">
+    <div class="welcome-hero-bg" aria-hidden="true">
+      <!-- Swap src for your lamp photo when ready -->
+      <img src="assets/LUMEN-BACKGROUND-AMBIENCE.jpg" alt="">
+    </div>
+
+    <div class="welcome-content reveal-on-scroll">
+      <p class="welcome-kicker">You're all set</p>
+      <h1>Welcome to Black Hue</h1>
+      <p>Your lamp is ready to transform the room. Follow the steps below to download the app and start creating your atmosphere.</p>
+    </div>
+
+    <p class="welcome-scroll-hint" aria-hidden="true">Scroll to set up</p>
+  </section>
+
+  <!-- ── Get the app ───────────────────────────────────────── -->
+  <section class="app-section">
+    <div class="app-inner">
+      <div class="section-heading reveal-on-scroll">
+        <h1>Download the app</h1>
+        <p>Control your light, save your moods, and sync to music — all from your phone.</p>
+      </div>
+
+      <div class="app-layout reveal-on-scroll">
+        <!-- QR code — visible on desktop only. Swap img src when ready. -->
+        <div class="qr-block" aria-label="Scan to download">
+          <div class="qr-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="3" height="3"/>
+              <rect x="18" y="14" width="3" height="3"/>
+              <rect x="14" y="18" width="3" height="3"/>
+              <rect x="18" y="18" width="3" height="3"/>
+            </svg>
+            <span>QR coming soon</span>
+          </div>
+          <p class="qr-label">Scan with your phone</p>
+        </div>
+
+        <!-- Store buttons -->
+        <div class="store-buttons">
+          <a class="store-btn" href="https://apps.apple.com/us/app/zengge/id1568677696" target="_blank" rel="noopener" aria-label="Download on the App Store">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <div class="store-btn-copy">
+              <span>Download on the</span>
+              <strong>App Store</strong>
+            </div>
+          </a>
+
+          <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.zengge.blev2&hl=en" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3.18 23.76c.3.17.64.24.99.2l12.6-7.28-2.7-2.7-10.89 9.78zM.75 1.5C.28 1.94 0 2.63 0 3.55v16.9c0 .92.28 1.61.76 2.05l.11.1 9.47-9.47v-.22L.86 3.44l-.11.06zM21.02 10.8l-2.69-1.55-3.02 3.02 3.02 3.02 2.7-1.56c.77-.44.77-1.49-.01-1.93zM4.17.24L16.77 7.5 14.1 10.2 3.18.42c.3-.22.66-.3 1-.18z"/>
+            </svg>
+            <div class="store-btn-copy">
+              <span>Get it on</span>
+              <strong>Google Play</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Manual download ───────────────────────────────────── -->
+  <section class="manual-section">
+    <div class="manual-inner reveal-on-scroll">
+      <h2>Setup guide</h2>
+      <p>A full walkthrough — from unboxing to your first mood. Download the PDF and keep it handy.</p>
+      <a class="manual-download-btn" href="#" download aria-label="Download setup guide PDF">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download setup guide
+      </a>
+    </div>
+  </section>
+
+  <!-- ── Mood teaser ───────────────────────────────────────── -->
+  <section class="moods-teaser-section">
+    <div class="section-heading reveal-on-scroll">
+      <h1>Start with a mood</h1>
+      <p>Pick one of these to get started, then make it your own.</p>
+    </div>
+
+    <div class="moods-teaser-grid reveal-on-scroll">
+      <article class="preset-card preset-campfire">
+        <h2>Campfire</h2>
+        <p>Warm amber tones inspired by the comfort of a glowing fire.</p>
+      </article>
+
+      <article class="preset-card preset-cinema">
+        <h2>Cinema</h2>
+        <p>Deep blues and cool tones that set the scene for movie night.</p>
+      </article>
+
+      <article class="preset-card preset-aurora">
+        <h2>Aurora</h2>
+        <p>Sweeping colour inspired by the northern lights.</p>
+      </article>
+    </div>
+
+    <div class="see-more-wrap reveal-on-scroll">
+      <a class="button button-secondary" href="moods.html">See all moods</a>
+    </div>
+  </section>
+
+  <!-- ── Footer (matches index.html exactly) ──────────────── -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <h2>Black Hue</h2>
+      <p>Lighting designed around atmosphere.</p>
+      <p>Designed in Kenya.</p>
+    </div>
+
+    <div class="footer-links" aria-label="Footer links">
+      <div>
+        <h3>Connect</h3>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+
+      <div>
+        <h3>Support</h3>
+        <a href="start-guide.html">Setup Guide</a>
+        <a href="mailto:hello@blackhue.co.ke">Contact Us</a>
+      </div>
+    </div>
+
+    <p class="footer-credit">&copy; 2026 Black Hue</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="order-modal.js"></script>
+
+</body>
+</html>
