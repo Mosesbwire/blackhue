@@ -49,3 +49,27 @@ if (revealItems.length > 0) {
     revealItems.forEach((item) => revealObserver.observe(item));
   }
 }
+
+
+const mainImage = document.getElementById("mainProductImage");
+const thumbs = document.querySelectorAll(".thumb");
+
+thumbs.forEach(thumb => {
+
+    thumb.addEventListener("click", () => {
+
+        thumbs.forEach(t => t.classList.remove("active"));
+
+        thumb.classList.add("active");
+
+        mainImage.style.opacity = 0;
+
+        setTimeout(() => {
+            mainImage.src = thumb.dataset.image;
+            mainImage.style.opacity = 1;
+        }, 150);
+
+    });
+
+});
+

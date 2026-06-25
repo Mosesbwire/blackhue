@@ -31,7 +31,7 @@
     <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="start-guide.html" aria-current="page">Start Guide</a>
-      <a href="vibes.html">Vibes</a>
+      <!-- <a href="vibes.html">Vibes</a> -->
       <a data-order-trigger="Black Hue Floor Lamp">Order</a>
     </nav>
   </header>
@@ -39,8 +39,10 @@
   <!-- ── Welcome hero ─────────────────────────────────────── -->
   <section class="welcome-hero">
     <div class="welcome-hero-bg" aria-hidden="true">
-      <!-- Swap src for your lamp photo when ready -->
-      <img src="assets/LUMEN-BACKGROUND-AMBIENCE.jpg" alt="">
+      <picture>
+        <source media="(max-width: 767px)" srcset="assets/startguide-mobile.jpg">
+        <img src="assets/Startup Guide hero.jpg" alt="" loading="eager">
+      </picture>
     </div>
 
     <div class="welcome-content reveal-on-scroll">
@@ -64,21 +66,19 @@
         <!-- QR code — visible on desktop only. Swap img src when ready. -->
         <div class="qr-block" aria-label="Scan to download">
           <div class="qr-placeholder">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="3" width="7" height="7" rx="1"/>
-              <rect x="14" y="3" width="7" height="7" rx="1"/>
-              <rect x="3" y="14" width="7" height="7" rx="1"/>
-              <rect x="14" y="14" width="3" height="3"/>
-              <rect x="18" y="14" width="3" height="3"/>
-              <rect x="14" y="18" width="3" height="3"/>
-              <rect x="18" y="18" width="3" height="3"/>
-            </svg>
-            <span>QR coming soon</span>
+            <img src="assets/appstore-QR.png" alt="QR code for App Store download">
+            
           </div>
-          <p class="qr-label">Scan with your phone</p>
+          <p class="qr-label">App Store</p>
         </div>
-
-        <!-- Store buttons -->
+        <div class="qr-block" aria-label="Scan to download">
+          <div class="qr-placeholder">
+            <img src="assets/playstore-QR.jpg" alt="QR code for Google Play download">
+          </div>
+          <p class="qr-label">Google Play</p>
+        </div>
+      </div>
+      <!-- Store buttons -->
         <div class="store-buttons">
           <a class="store-btn" href="https://apps.apple.com/us/app/zengge/id1568677696" target="_blank" rel="noopener" aria-label="Download on the App Store">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -100,16 +100,15 @@
             </div>
           </a>
         </div>
-      </div>
     </div>
   </section>
 
   <!-- ── Manual download ───────────────────────────────────── -->
   <section class="manual-section">
     <div class="manual-inner reveal-on-scroll">
-      <h2>Setup guide</h2>
+      <h1>Setup guide</h1>
       <p>A full walkthrough — from unboxing to your first mood. Download the PDF and keep it handy.</p>
-      <a class="manual-download-btn" href="#" download aria-label="Download setup guide PDF">
+      <a class="manual-download-btn" href="assets/Manual.pdf" target="_blank"download="Black Hue Setup Guide" aria-label="Download setup guide PDF">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
           <polyline points="7 10 12 15 17 10"/>
@@ -121,7 +120,7 @@
   </section>
 
   <!-- ── Mood teaser ───────────────────────────────────────── -->
-  <section class="moods-teaser-section">
+  <!-- <section class="moods-teaser-section">
     <div class="section-heading reveal-on-scroll">
       <h1>Start with a mood</h1>
       <p>Pick one of these to get started, then make it your own.</p>
@@ -145,15 +144,15 @@
     </div>
 
     <div class="see-more-wrap reveal-on-scroll">
-      <a class="button button-secondary" href="moods.html">See all moods</a>
+      <a class="button button-secondary" href="vibes.html">See all moods</a>
     </div>
-  </section>
+  </section> -->
 
   <!-- ── Footer (matches index.html exactly) ──────────────── -->
   <footer class="site-footer">
     <div class="footer-brand">
       <h2>Black Hue</h2>
-      <p>Lighting designed around atmosphere.</p>
+      
       <p>Designed in Kenya.</p>
     </div>
 

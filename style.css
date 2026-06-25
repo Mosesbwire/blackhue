@@ -32,6 +32,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   background: var(--color-background);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -392,9 +393,11 @@ select:focus-visible {
 }
 .vibes-action {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 2rem;
 }
+
 
 .presets-section {
   background: var(--color-background);
@@ -746,10 +749,67 @@ select:focus-visible {
   z-index: -1;
 }
 
-.purchase-visual img {
-  max-height: min(56vh, 34rem);
-  object-fit: contain;
-  width: min(100%, 24rem);
+
+
+.product-gallery {
+    width: 100%;
+    max-width: 650px;
+}
+
+.gallery-main {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #111;
+    border: 1px solid rgb(255 255 255 / 8%);
+    
+}
+
+.gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: opacity .3s ease;
+}
+
+.gallery-thumbs {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    
+}
+
+.gallery-thumbs::-webkit-scrollbar {
+    height: 6px;
+}
+
+.gallery-thumbs::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.15);
+    border-radius: 20px;
+}
+
+.thumb {
+    border: 2px solid transparent;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.thumb img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+}
+
+.thumb.active {
+    border-color: #ff8c42;
 }
 
 .site-footer {
@@ -961,8 +1021,13 @@ select:focus-visible {
     font-size: 1rem;
     padding: 1.25rem;
   }
-  .vibes-action {
-   
+  .vibes-action p {
+    text-align: center;
+  }
+  .vibes-action .button {
+    width: 20%;
+    margin-top: 2rem;
+    align-self: center;
   }
 
   .presets-section {
@@ -1108,13 +1173,8 @@ select:focus-visible {
     width: auto;
   }
 
-  .purchase-visual {
-    min-height: 42rem;
-  }
-
-  .purchase-visual img {
-    max-height: min(76vh, 48rem);
-    width: min(100%, 34rem);
+  .gallery-main {
+    max-height: 30rem;
   }
 
   .site-footer {
@@ -1639,7 +1699,7 @@ START GUIDE STYLES
     /* ── Desktop overrides ──────────────────────────────────── */
     @media (min-width: 768px) {
       .app-layout {
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 1fr 1fr;
         text-align: left;
       }
 
@@ -1649,6 +1709,7 @@ START GUIDE STYLES
 
       .store-buttons {
         max-width: 22rem;
+        display: none;
       }
 
       .moods-teaser-grid {

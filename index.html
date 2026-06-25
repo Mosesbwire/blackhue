@@ -16,7 +16,8 @@
 <body>
     <header class="site-header">
         <a class="logo-slot" href="/" aria-label="Lumen home">
-            <img src="assets/black-hue-logo.png" alt="Lumen logo, a stylized light bulb with rays of light emanating from it">
+            <img src="assets/black-hue-logo.png"
+                alt="Lumen logo, a stylized light bulb with rays of light emanating from it">
         </a>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
@@ -25,9 +26,10 @@
         </button>
 
         <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
-            <a href="vibes.html">Vibes</a>
+            <!-- <a href="vibes.html">Vibes</a> -->
             <a href="start-guide.html">Setup Guide</a>
             <a href="#pricing">Pricing</a>
+            <a data-order-trigger="Black Hue Floor Lamp">Buy Now</a>
         </nav>
     </header>
 
@@ -48,7 +50,7 @@
             <p>Create warm, immersive ambience for quiet evenings, movie nights and everything in between.</p>
 
             <div class="hero-actions" aria-label="Hero actions">
-                <a class="button button-primary" href="#pricing">Order yours</a>
+                <a class="button button-primary" data-order-trigger="Black Hue Floor Lamp">Order yours</a>
                 <a class="button button-secondary" href="#transformation">See it in action</a>
             </div>
         </div>
@@ -81,9 +83,10 @@
                 <p>Unwind, recharge, and enjoy the comfort of home.</p>
             </article>
         </div>
-        <div class="vibes-action">
+        <!-- <div class="vibes-action">
+                <p>Discover the perfect vibe for every moment with our curated guide.</p>
                 <a class="button button-secondary" href="vibes.html">See the Vibes Guide</a>
-        </div>
+        </div> -->
     </section>
 
     <!-- <section class="presets-section" id="settings">
@@ -121,7 +124,8 @@
             <h1 class="belief-title reveal-on-scroll" id="belief-title">More than light.</h1>
             <div class="belief-copy reveal-on-scroll">
                 <p>Light does more than illuminate a room.</p>
-                <p>It brings warmth to quiet evenings and energy to the moments worth celebrating. It transforms spaces from functional to inviting.</p>
+                <p>It brings warmth to quiet evenings and energy to the moments worth celebrating. It transforms spaces
+                    from functional to inviting.</p>
                 <p>The best rooms are defined by how they make people feel.</p>
             </div>
         </div>
@@ -157,7 +161,8 @@
 
                     <article>
                         <h2>Designed for Modern Living</h2>
-                        <p>An elegant, 140cm minimalist lamp designed to cast a perfect seamless glow into any corner.</p>
+                        <p>An elegant, 140cm minimalist lamp designed to cast a perfect seamless glow into any corner.
+                        </p>
                     </article>
                 </div>
 
@@ -211,20 +216,57 @@
             </div>
 
             <div class="purchase-actions" aria-label="Purchase actions">
-                <a class="button button-primary" href="#pricing" data-order-trigger="Black Hue Floor Lamp">Order Yours</a>
-                <a class="button button-secondary" href="https://wa.me/" target="_blank" rel="noopener">Talk to us on WhatsApp</a>
+                <a class="button button-primary" href="#pricing" data-order-trigger="Black Hue Floor Lamp">Order
+                    Yours</a>
+                <a class="button button-secondary" href="https://wa.me/" target="_blank" rel="noopener">Talk to us on
+                    WhatsApp</a>
             </div>
         </div>
 
-        <div class="purchase-visual" aria-hidden="true">
+        <!-- <div class="purchase-visual" aria-hidden="true">
             <img src="assets/black-hue-lamp.png" alt="">
+        </div> -->
+        <div class="purchase-visual">
+
+            <div class="product-gallery">
+
+                <div class="gallery-main">
+                    <img id="mainProductImage" src="assets/blackhuefloorlamp.jpg" alt="Black Hue Floor Lamp">
+                </div>
+
+                <div class="gallery-thumbs">
+
+                    <button class="thumb active" data-image="assets/blackhue-floorlamp.jpg">
+                        <img src="assets/blackhue-floorlamp.jpg" alt="">
+                    </button>
+
+                    <button class="thumb" data-image="assets/blackhuefloorlamp-03.jpg">
+                        <img src="assets/blackhuefloorlamp-03.jpg" alt="">
+                    </button>
+
+                    <button class="thumb" data-image="assets/blackhue-floorlamp.jpg">
+                        <img src="assets/blackhue-floorlamp.jpg" alt="">
+                    </button>
+
+                    <button class="thumb" data-image="assets/blackhuefloorlamp-02.jpg">
+                        <img src="assets/blackhuefloorlamp-02.jpg" alt="">
+                    </button>
+
+                    <button class="thumb" data-image="assets/blackhuefloorlamp.jpg">
+                        <img src="assets/blackhuefloorlamp.jpg" alt="">
+                    </button>
+
+                </div>
+
+            </div>
+
         </div>
     </section>
 
     <footer class="site-footer">
         <div class="footer-brand">
             <h2>Black Hue</h2>
-            <p>Lighting designed around atmosphere.</p>
+
             <p>Designed in Kenya.</p>
         </div>
 
