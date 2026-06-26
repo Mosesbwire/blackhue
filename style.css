@@ -320,11 +320,14 @@ select:focus-visible {
   gap: 0.75rem;
   margin-top: 2rem;
   width: min(100%, 20rem);
+  
+  margin-inline: auto;
 }
 
 .hero-actions .button {
   min-height: 3rem;
   width: 100%;
+  
 }
 
 .moments-section {
@@ -729,7 +732,11 @@ select:focus-visible {
   min-height: 3.15rem;
   width: 100%;
 }
+.purchase-note {
 
+  margin-top: 1rem;
+  text-align: center;
+}
 .purchase-visual {
   align-items: end;
   display: flex;
@@ -1171,6 +1178,10 @@ select:focus-visible {
   .purchase-actions .button {
     min-height: 3rem;
     width: auto;
+  }
+  .purchase-note {
+
+    text-align: left;
   }
 
   .gallery-main {

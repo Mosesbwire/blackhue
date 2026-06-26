@@ -1,36 +1,41 @@
 (function () {
   // 1. CONFIGURATION: Update with your full international phone number (no spaces, no +)
-  const WHATSAPP_NUMBER = '254700000000'; 
+  const WHATSAPP_NUMBER = '254720005493'; 
 
   // 2. GENERATE AND INJECT THE COMPLETE STRUCTURAL MARKUP
   const modalHTML = `
     <div class="bh-modal-glow-container">
       <div class="bh-modal-glow" aria-hidden="true"></div>
       <div class="bh-modal-card">
-        <h3>Arrange Your Dispatch</h3>
-        <p>Secure your <span id="bh-dynamic-product" style="color:#f5f3ee; font-weight:500;">Floor Lamp</span>. Enjoy premium <strong>Payment on Delivery</strong>—no immediate transfer required.</p>
+        <h3>Order Your Lamp</h3>
+        <p>Secure your <span id="bh-dynamic-product" style="color:#f5f3ee; font-weight:500;">Floor Lamp</span>. <strong>Payment on Delivery</strong>.</p>
         
         <form id="bhWhatsAppOrderForm">
           <input type="hidden" id="bhProductInput" value="">
           
           <div class="bh-form-group">
             <label for="bhCustName">Your Full Name</label>
-            <input type="text" id="bhCustName" class="bh-form-input" required autocomplete="name" placeholder="e.g., Malik Benson">
+            <input type="text" id="bhCustName" class="bh-form-input" required autocomplete="name" placeholder="e.g., Jane">
           </div>
           
           <div class="bh-form-group">
             <label for="bhCustLocation">Delivery Location / Estate</label>
             <input type="text" id="bhCustLocation" class="bh-form-input" required placeholder="e.g., Kilimani, Nairobi">
           </div>
+
+          <div class="bh-form-group">
+            <label for="bhCustLocationLandMark">Main Landmark</label>
+            <input type="text" id="bhCustLocationLandMark" class="bh-form-input" required placeholder="e.g., Next to QuickMart">
+          </div>
           
           <div class="bh-form-group">
-            <label for="bhCustNotes">Special Logistics (Optional)</label>
+            <label for="bhCustNotes">Delivery Instructions (Optional)</label>
             <textarea id="bhCustNotes" class="bh-form-input" placeholder="e.g., Best delivered after 3 PM, call on arrival"></textarea>
           </div>
           
           <div class="bh-modal-actions">
             <button type="submit" class="bh-btn-submit">
-              Arrange Dispatch via WhatsApp
+              Order via WhatsApp
             </button>
             <button type="button" id="bhCloseModal" class="bh-btn-cancel">Close</button>
           </div>
@@ -98,7 +103,7 @@
       `📍 *Delivery Location:* ${location}\n` +
       `📝 *Logistics Notes:* ${notes}\n\n` +
       `⚠️ *Payment Framework:* Payment on Delivery (Cash/Mobile Money).\n\n` +
-      `Please confirm my dispatch windows and schedule!`;
+      `Please confirm my order and delivery`;
     
     const encodedPayload = encodeURIComponent(textPayload);
     const whatsappFinalUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedPayload}`;
