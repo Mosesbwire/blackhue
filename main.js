@@ -112,3 +112,12 @@ thumbs.forEach(thumb => {
 
 });
 
+document.querySelectorAll('.whatsapp-contact-link').forEach(link => {
+  link.addEventListener('click', () => {
+    if (typeof gtag === 'function') {
+      gtag('event', 'whatsapp_contact_click', {
+        link_location: link.dataset.whatsappLocation || 'unknown'
+      });
+    }
+  });
+});

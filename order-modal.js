@@ -1,7 +1,11 @@
 (function () {
   // 1. CONFIGURATION: Update with your full international phone number (no spaces, no +)
-  const WHATSAPP_NUMBER = '254720005493'; 
-
+  const WHATSAPP_NUMBER = '254720005493';
+  function trackEvent(eventName, params = {}) {
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, params);
+    }
+  }
   // 2. GENERATE AND INJECT THE COMPLETE STRUCTURAL MARKUP
   const modalHTML = `
     <div class="bh-modal-glow-container">
@@ -57,13 +61,25 @@
   const form = document.getElementById('bhWhatsAppOrderForm');
   const cancelButton = document.getElementById('bhCloseModal');
 
-  function openModal(productName) {
+  // function openModal(productName) {
+  //   hiddenInput.value = productName;
+  //   if (productSpan) productSpan.textContent = productName;
+  //   overlay.classList.add('is-active');
+  //   document.body.style.overflow = 'hidden'; // Lock scrolling
+  // }
+
+  function openModal(productName, location) {
     hiddenInput.value = productName;
     if (productSpan) productSpan.textContent = productName;
-    overlay.classList.add('is-active');
-    document.body.style.overflow = 'hidden'; // Lock scrolling
-  }
 
+    trackEvent('order_modal_open', {
+      product_name: productName,
+      button_location: location || 'unknown'
+    });
+
+    overlay.classList.add('is-active');
+    document.body.style.overflow = 'hidden';
+  }
   function closeModal() {
     overlay.classList.remove('is-active');
     document.body.style.overflow = ''; // Restore scrolling
@@ -76,7 +92,10 @@
     if (trigger) {
       e.preventDefault();
       const product = trigger.getAttribute('data-order-trigger') || 'Black Hue Product';
-      openModal(product);
+      const location = trigger.getAttribute('data-order-location') || 'unknown';
+
+      openModal(product, location);
+
     }
   });
 
@@ -89,14 +108,14 @@
   // Form Submission text layout assembly
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    
+
     const product = hiddenInput.value;
     const name = document.getElementById('bhCustName').value.trim();
     const location = document.getElementById('bhCustLocation').value.trim();
     const notes = document.getElementById('bhCustNotes').value.trim() || 'None provided';
-    
+
     // Clean, crisp payload architecture optimized for a modern business workflow
-    const textPayload = 
+    const textPayload =
       `📦 *NEW ORDER PLACED* 📦\n\n` +
       `🛒 *Product:* ${product}\n` +
       `👤 *Customer Name:* ${name}\n` +
@@ -104,10 +123,14 @@
       `📝 *Logistics Notes:* ${notes}\n\n` +
       `⚠️ *Payment Framework:* Payment on Delivery (Cash/Mobile Money).\n\n` +
       `Please confirm my order and delivery`;
-    
+
     const encodedPayload = encodeURIComponent(textPayload);
     const whatsappFinalUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedPayload}`;
-    
+    trackEvent('order_whatsapp_submit', {
+      product_name: product,
+      delivery_location: location
+    });
+
     window.open(whatsappFinalUrl, '_blank');
     closeModal();
   });
