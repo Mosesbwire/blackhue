@@ -11,6 +11,15 @@
     <link rel="apple-touch-icon" href="assets/blackhue-favicon.png">
     <link rel="stylesheet" href="style.css">
     <title>Black Hue</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-02DYPL4CR1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-02DYPL4CR1');
+    </script>
 </head>
 
 <body>
@@ -37,13 +46,8 @@
         <div class="hero-background" aria-hidden="true">
             <picture class="hero-bg hero-bg-bland">
                 <source media="(min-width: 768px)" srcset="assets/LUMEN-BACKGROUND-BLAND.jpg">
-                <img 
-                    src="assets/LUMEN-BACKGROUND-BLAND-MOBILE.jpg"
-                    alt=""
-                    fetchpriority="high"
-                    decoding="async"
-                    id="heroBlandImage"
-                >
+                <img src="assets/LUMEN-BACKGROUND-BLAND-MOBILE.jpg" alt="" fetchpriority="high" decoding="async"
+                    id="heroBlandImage">
             </picture>
             <!-- <picture class="hero-bg hero-bg-ambience">
                 <source media="(min-width: 768px)" srcset="assets/LUMEN-BACKGROUND-AMBIENCE.jpg">
@@ -224,7 +228,8 @@
             <div class="purchase-actions" aria-label="Purchase actions">
                 <a class="button button-primary" href="#pricing" data-order-trigger="Black Hue Floor Lamp">Order
                     Yours</a>
-                <a class="button button-secondary" href="https://wa.me/254720005493" target="_blank" rel="noopener">Talk to us on
+                <a class="button button-secondary" href="https://wa.me/254720005493" target="_blank" rel="noopener">Talk
+                    to us on
                     WhatsApp</a>
             </div>
             <div class="purchase-note">
