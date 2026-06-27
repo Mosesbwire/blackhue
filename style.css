@@ -289,10 +289,13 @@ select:focus-visible {
 }
 
 .hero-bg-ambience {
-  animation: ambience-fade-in 2800ms ease 1000ms forwards;
+  /* animation: ambience-fade-in 2800ms ease 1000ms forwards; */
   opacity: 0;
+  transition: opacity 10s ease;
 }
-
+.hero-bg-ambience.is-visible {
+  opacity: 1;
+}
 .hero-content {
   align-self: stretch;
   display: flex;

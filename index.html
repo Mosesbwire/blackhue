@@ -37,12 +37,18 @@
         <div class="hero-background" aria-hidden="true">
             <picture class="hero-bg hero-bg-bland">
                 <source media="(min-width: 768px)" srcset="assets/LUMEN-BACKGROUND-BLAND.jpg">
-                <img src="assets/LUMEN-BACKGROUND-BLAND-MOBILE.jpg" alt="">
+                <img 
+                    src="assets/LUMEN-BACKGROUND-BLAND-MOBILE.jpg"
+                    alt=""
+                    fetchpriority="high"
+                    decoding="async"
+                    id="heroBlandImage"
+                >
             </picture>
-            <picture class="hero-bg hero-bg-ambience">
+            <!-- <picture class="hero-bg hero-bg-ambience">
                 <source media="(min-width: 768px)" srcset="assets/LUMEN-BACKGROUND-AMBIENCE.jpg">
                 <img src="assets/LUMEN-BACKGROUND-AMBIENCE-MOBILE.jpg" alt="">
-            </picture>
+            </picture> -->
         </div>
 
         <div class="hero-content">

@@ -51,6 +51,45 @@ if (revealItems.length > 0) {
 }
 
 
+  const heroBackground = document.querySelector(".hero-background");
+  const blandImg = document.getElementById("heroBlandImage");
+
+  function loadAmbienceImage() {
+    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+
+    const picture = document.createElement("picture");
+    picture.className = "hero-bg hero-bg-ambience";
+
+    const source = document.createElement("source");
+    source.media = "(min-width: 768px)";
+    source.srcset = "assets/LUMEN-BACKGROUND-AMBIENCE.jpg";
+
+    const img = document.createElement("img");
+    img.src = isDesktop
+      ? "assets/LUMEN-BACKGROUND-AMBIENCE.jpg"
+      : "assets/LUMEN-BACKGROUND-AMBIENCE-MOBILE.jpg";
+    img.alt = "";
+    img.decoding = "async";
+
+    picture.appendChild(source);
+    picture.appendChild(img);
+    heroBackground.appendChild(picture);
+
+    img.onload = () => {
+      requestAnimationFrame(() => {
+        picture.classList.add("is-visible");
+      });
+    };
+  }
+
+  if (blandImg.complete) {
+    loadAmbienceImage();
+  } else {
+    blandImg.addEventListener("load", loadAmbienceImage, { once: true });
+  }
+
+
+
 const mainImage = document.getElementById("mainProductImage");
 const thumbs = document.querySelectorAll(".thumb");
 
